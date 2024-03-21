@@ -2,13 +2,24 @@
 *::after,
 *::before {
     box-sizing: border-box;
-}
-
-body {
     margin: 0;
     padding: 0;
 }
 
+.titulo {
+    margin-block: 40px;
+}
+
+.h1-principal {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 3rem;
+    text-wrap: balance;
+}
 
 .grid {
     display: grid;
