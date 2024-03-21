@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    gap: 32px;
+    margin-inline: auto;
+}
+
+.contenedor-card {
+    width: 200px;
+    height: 200px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front img {
+    width: 200px;
+    height: 200px;
+    object-fit:fill;
+    scale: 1.5;
+}
+
+.back img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contenedor-card:hover .card {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+    transition-duration: 2s;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    overflow: hidden;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg) rotateZ(180deg);
+}
