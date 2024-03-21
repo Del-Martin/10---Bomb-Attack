@@ -94,7 +94,14 @@ body {
 
 .cheat {
     grid-area: cheat;
-    width: 100px;
-    height: 100px;
-    border: solid 2px black;
+    margin: 32px;
+    opacity: 0;
+}
+
+.cheat p {
+    font-family: Pixelify Sans;
+}
+
+.cheat:hover {
+    opacity: 1;
 }
